@@ -1,0 +1,48 @@
+@use 'variables'as *;
+
+p {
+	margin-top: 0;
+	text-align: justify;
+}
+
+
+
+a {
+	:link {
+		font-weight: bold;
+		text-decoration: none;
+		color: $accent1;
+	}
+
+	:visited {
+		font-weight: bold;
+		text-decoration: none;
+		color: $text-light;
+	}
+
+	:hover,
+	:focus,
+	:active {
+		text-decoration: underline;
+		color: $accent2;
+	}
+}
+
+abbr {
+	border-bottom: none;
+}
+
+.preamble {
+	clear: right;
+	padding: 0px 10px 0 10px;
+}
+
+.supporting {
+	padding-left: 10px;
+	margin-bottom: 40px;
+}
+
+@mixin uppercase($color: $text-dark) {
+    text-transform: uppercase;
+    color: $color;
+}

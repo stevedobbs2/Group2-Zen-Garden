@@ -1,0 +1,42 @@
+// styles.scss
+@use "variables"as *; //this puts all the variables in the global namespace.
+@use 'atoms'; // assumes file is named _atoms.scss
+@use 'molecules'; // assumes file is named _molecules.scss
+@use 'organisms'; // can shorten the name if we like
+
+//* {
+//	box-sizing: border-box;
+//}
+
+html {
+	background-color: $background-color;
+	padding: 5%;
+}
+
+body {
+	font-family: $fonts-body;
+	font-size: 70%;
+	color: $text-light;
+	background: $background-color url("images/galaxy1.jpg");
+	margin: 0;
+	padding: 0;
+	//max-width: 800px;
+}
+.page-wrapper {
+	
+	display: grid;
+	//grid-template-columns: 100px 1fr 100px;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(auto, 5);
+	//grid-template-columns: 100px repeat(3, 1fr);
+	//grid-template-rows: 1fr;
+	grid-template-areas:
+    "intro"
+	"main"
+    "sidebar";
+	//grid-template-rows: repeat(5, 1fr);
+	//background: $background-color url("images/galaxy1.jpg");
+	//margin: 0 100px;
+	margin: 0;
+	//position: relative;
+  }

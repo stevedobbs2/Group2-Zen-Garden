@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital@0;1&family=Lexend+Zetta:wght@300&display=swap");
+p {
+  margin-top: 0;
+  text-align: justify;
+}
+
+a :link {
+  font-weight: bold;
+  text-decoration: none;
+  color: #2F6C73;
+}
+a :visited {
+  font-weight: bold;
+  text-decoration: none;
+  color: #F6F3EE;
+}
+a :hover,
+a :focus,
+a :active {
+  text-decoration: underline;
+  color: #BF6734;
+}
+
+abbr {
+  border-bottom: none;
+}
+
+.preamble {
+  clear: right;
+  padding: 0px 10px 0 10px;
+}
+
+.supporting {
+  padding-left: 10px;
+  margin-bottom: 40px;
+}
+
+h3 {
+  text-transform: uppercase;
+  color: #F6F3EE;
+  font: italic normal 1.4em "Lexend Zetta", sans-serif;
+  margin-bottom: 0;
+}
+
+.design-name a,
+.viewall a,
+.view-css a,
+.css-resources a,
+.zen-faq a,
+.zen-submit a,
+.zen-translations a {
+  text-transform: uppercase;
+  color: #F6F3EE;
+}
+
+header {
+  grid-area: hd;
+  padding-top: 20px;
+  height: 100px;
+}
+header h1 {
+  text-transform: uppercase;
+  color: #F6F3EE;
+  font: normal 2em "Lexend Zetta", sans-serif;
+  margin-top: 10px;
+}
+header h2 {
+  font: normal 1.5em "Lexend Zetta", sans-serif;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.intro {
+  grid-area: intro;
+  display: grid;
+  grid-template-areas: "head" "summary" "preamble";
+  width: auto;
+  margin: 0px 200px;
+}
+.intro header {
+  grid-area: head;
+}
+.intro .summary {
+  grid-area: summary;
+  clear: both;
+  margin: 20px 20px 20px 10px;
+  width: 160px;
+  float: left;
+  margin: 0px 200px;
+}
+.intro .summary p {
+  font: italic 1.1em/2.2 "Exo 2", sans-serif;
+  text-align: center;
+  color: #F6F3EE;
+}
+.intro .preamble {
+  grid-area: preamble;
+}
+
+.explanation a:link,
+.explanation a:visited,
+.participation a:link,
+.participation a:visited,
+.requirements a:link,
+.requirements a:visited,
+.summary a:link,
+.summary a:visited {
+  color: #2F6C73;
+}
+
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-areas: "explanation" "participation" "benefits" "requirements";
+  width: auto;
+  margin: 0px 200px;
+}
+
+.explanation {
+  grid-area: explanation;
+}
+
+.participation {
+  grid-area: participation;
+}
+
+.benefits {
+  grid-area: benefits;
+}
+
+.requirements {
+  grid-area: requirements;
+}
+
+footer {
+  position: fixed;
+  top: 200px;
+  left: 75px;
+  background-color: #2F6C73;
+  text-align: center;
+  width: 10%;
+  border: 2px solid #121D40;
+  border-radius: 10px;
+}
+footer a {
+  display: block;
+}
+footer a:link,
+footer a:visited {
+  margin-right: 25px;
+  margin-left: 5px;
+}
+
+.wrapper {
+  font: 10px "Exo 2", sans-serif;
+  /*background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y;*/
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+  grid-template-rows: repeat(auto, 3);
+  grid-auto-rows: max-content;
+  grid-area: ". ds ." ". da .";
+}
+.wrapper .design-selection {
+  grid-area: ds;
+}
+.wrapper .design-archives {
+  grid-area: da;
+}
+.wrapper .zen-resources {
+  display: inline-flex;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: max-content;
+  background-color: #2F6C73;
+  border: 2px solid #121D40;
+  border-radius: 10px;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 0 20px;
+}
+.wrapper .zen-resources .resources {
+  grid-row: 1/2;
+  color: #BF6734;
+  font-size: 4em;
+  font-weight: 500;
+  margin: 0;
+  text-align: center;
+}
+.wrapper .zen-resources ul {
+  grid-row: 2/3;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(1fr);
+}
+.wrapper .zen-resources ul li {
+  grid-column: auto;
+  grid-row: 1/2;
+  background-color: #BF6734;
+  text-align: center;
+  border: 2px solid #121D40;
+  border-radius: 10px;
+  font-size: 1.5em;
+}
+@media (max-width: 400px) {
+  .wrapper .zen-resources ul {
+    display: grid;
+    grid-gap: 5px 50px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1fr);
+  }
+  .wrapper .zen-resources ul li {
+    grid-column: auto;
+    grid-row: auto;
+    width: 50%;
+    justify-self: center;
+    font-size: 1em;
+  }
+}
+
+.sidebar {
+  grid-area: sidebar;
+  margin: 0;
+  position: relative;
+}
+.sidebar h3.select {
+  /*background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left;*/
+  margin: 10px 0 5px 0;
+  width: 97px;
+  height: 16px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.sidebar h3.archives {
+  /*background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left;*/
+  margin: 25px 0 5px 0;
+  width: 57px;
+  height: 14px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.sidebar ul {
+  margin: 0;
+  padding: 0;
+}
+.sidebar li {
+  line-height: 1.3em;
+  /*background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center;*/
+  display: block;
+  padding-top: 5px;
+  margin-bottom: 5px;
+  list-style-type: none;
+}
+.sidebar li a:link {
+  color: #2F6C73;
+}
+.sidebar li a:visited {
+  color: #B3AE94;
+}
+
+html {
+  background-color: #121D40;
+  padding: 5%;
+}
+
+body {
+  font-family: "Exo 2", sans-serif;
+  font-size: 70%;
+  color: #F6F3EE;
+  background: #121D40 url("images/galaxy1.jpg");
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto, 5);
+  grid-template-areas: "intro" "main" "sidebar";
+  margin: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
