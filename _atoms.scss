@@ -1,48 +1,74 @@
 @use 'variables'as *;
 
-p {
-	margin-top: 0;
-	text-align: justify;
+/**********************************************
+MOBILE STYLES 
+**********************************************/
+
+h1 {
+	@include heading-capitalized-light(1.5rem);
+    text-align: center;
+	margin: auto;
 }
 
+h2 {
+	@include heading-capitalized-light(0.8rem);
+    text-align: center;
+    margin: auto;
+}
 
+h3 {
+	@include heading-capitalized-light($mobile-heading-font-size);
+}
+
+p {
+	text-align: justify;
+	@include body-normal-light($mobile-body-font-size);
+	line-height: 18px;
+}
 
 a {
-	:link {
-		font-weight: bold;
-		text-decoration: none;
-		color: $accent1;
-	}
-
-	:visited {
-		font-weight: bold;
-		text-decoration: none;
-		color: $text-light;
-	}
-
-	:hover,
-	:focus,
-	:active {
+	@include links-normal-light($mobile-body-font-size);
+	&:hover,
+	&:focus,
+	&:active {
 		text-decoration: underline;
-		color: $accent2;
 	}
 }
 
 abbr {
-	border-bottom: none;
+	text-decoration: none;
 }
 
-.preamble {
-	clear: right;
-	padding: 0px 10px 0 10px;
-}
 
-.supporting {
-	padding-left: 10px;
-	margin-bottom: 40px;
-}
+/**********************************************
+DESKTOP STYLES 
+**********************************************/
 
-@mixin uppercase($color: $text-dark) {
-    text-transform: uppercase;
-    color: $color;
+@media screen and (min-width: $breakpoint) {
+
+	h1 {
+		@include heading-capitalized-light(4rem);
+		text-align: left;
+	}
+	
+	h2 {
+		@include heading-capitalized-light(1.5rem);
+		text-align: left;
+	}
+
+	h3 {
+		@include heading-capitalized-light($desktop-heading-font-size);
+		text-align: right;
+		line-height: 25px;
+	}
+
+	p {
+		@include body-normal-light($desktop-body-font-size);
+		line-height: 20px;
+	}
+
+	a {
+		@include links-normal-light($desktop-body-font-size);
+	}
+
 }
