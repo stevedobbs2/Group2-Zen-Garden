@@ -38,6 +38,10 @@ header {
     padding: 0 20px;
 }
 
+.preamble p, .explanation p, .participation p, .benefits p, .requirements p {
+    opacity: 0.7;
+}
+
 
 
 /**********************************************
@@ -88,7 +92,6 @@ DESKTOP STYLES
 
         p {
             grid-column: 2/3;
-            opacity: 0.7;
         }
 
     }
