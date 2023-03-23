@@ -1,9 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital@0;1&family=Lexend+Zetta:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital@0;1&family=Lexend+Zetta:wght@300&display=swap&family=Manrope&display=swap');
+
 $fonts-body: 'Exo 2', sans-serif;
 $fonts-headline: 'Lexend Zetta', sans-serif;
+$fonts-extras: 'Manrope', sans-serif;
+
+// Screen sizes
+$breakpoint: 650px;
+
+// Colors
 $primary: #121D40;
 $accent1: #2F6C73;
-$accent2: #BF6734;
+$accent2: #c06835;
 $text-dark: #0A1126;
 $text-light: #F6F3EE;
-$background-color: #121D40;
+$background-color: black;
+
+// Mobile font sizes
+$mobile-body-font-size: 14px;
+$mobile-heading-font-size: 1rem;
+
+// Desktop font sizes
+$desktop-body-font-size: 1rem;
+$desktop-heading-font-size: 1.5rem;
+
+
+/*** Font & Color Mixins **********************************************/
+
+@mixin heading-capitalized-light($f-size) {
+    font-family: $fonts-headline;
+    font-size: $f-size;
+    text-transform: uppercase;
+    color: $text-light;
+}
+
+@mixin body-capitalized-light($f-size) {
+    font-family: $fonts-body;
+    font-size: $f-size;
+    text-transform: uppercase;
+    color: $text-light;
+}
+
+@mixin body-normal-light($f-size) {
+    font-family: $fonts-body;
+    font-size: $f-size;
+    color: $text-light;
+}
+
+@mixin links-normal-light($f-size) {
+    font-family: $fonts-body;
+    font-size: $f-size;
+    color: $text-light;
+    text-decoration: none;
+}
+
+
+/*** Archive Mixins **********************************************/
+
+@mixin arrow-styles() {
+	visibility: visible;
+	font-family: $fonts-extras;
+	font-size: 80px;
+	position: relative;
+    bottom: 35px;
+}
