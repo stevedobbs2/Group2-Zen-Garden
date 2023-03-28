@@ -15,15 +15,47 @@ html {
 
 body {
 	margin: 0;
-	background: #000 url("images/cmp_galaxy1.jpg") 100vw 100vh/contain repeat;
-	z-index: -2;
 	position: relative;
 }
 
 .page-wrapper {
 	margin: 0;
-}
 
-@media screen and (min-width: $breakpoint) {
+	&::before {
+		content: "";
+		position: absolute;
+		top: 400px;
+		width: 100vw;
+		height: 85%;
+		opacity: 0.5;
+		box-shadow: 0 -40px 50px 0px rgba(0, 0, 0, 0.5);
+		z-index: -1;
+		/*background: #000 url("images/cmp_galaxy1.jpg") 100vw 100vh/cover repeat;*/
+		background-image: url("images/cmp_galaxy1.jpg");
+		background-size: contain;
+		background-repeat: no-repeat repeat;
+		z-index: -2;
+	}
 
+	@media screen and (min-width: $breakpoint2) {
+		&::before {
+			content: "";
+			height: 83%;
+		}
+	}
+
+	@media screen and (min-width: $breakpoint) {
+		&::before {
+			content: "";
+			height: 90%;
+		}
+	}
+
+	@media screen and (min-width: $breakpoint3) {
+		&::before {
+			content: "";
+			height: 88%;
+		}
+	}
+	
 }

@@ -131,8 +131,7 @@ header {
 }
 
 .preamble p, .explanation p, .participation p, .benefits p, .requirements p {
-  opacity: 0.95;
-  line-height: 1.4;
+  opacity: 0.9;
 }
 
 /**********************************************
@@ -436,15 +435,6 @@ html {
   background-color: black;
 }
 
-body {
-  margin: 0;
-  position: relative;
-}
-
-.page-wrapper {
-  margin: 0;
-  /*}*/
-}
 .page-wrapper::before {
   content: "";
   position: absolute;
@@ -460,23 +450,14 @@ body {
   background-repeat: no-repeat repeat;
   z-index: -2;
 }
-@media screen and (min-width: 570px) {
-  .page-wrapper::before {
-    content: "";
-    height: 83%;
-  }
+body {
+  margin: 0;
+  /*z-index: -2;*/
+  position: relative;
 }
-@media screen and (min-width: 650px) {
-  .page-wrapper::before {
-    content: "";
-    height: 90%;
-  }
-}
-@media screen and (min-width: 750px) {
-  .page-wrapper::before {
-    content: "";
-    height: 88%;
-  }
+
+.page-wrapper {
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

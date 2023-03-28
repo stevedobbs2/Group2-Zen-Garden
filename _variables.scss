@@ -6,13 +6,16 @@ $fonts-extras: 'Manrope', sans-serif;
 
 // Screen sizes
 $breakpoint: 650px;
+$breakpoint2: 570px;
+$breakpoint3: 750px;
 
 // Colors
 $primary: #121D40;
 $accent1: #2F6C73;
 $accent2: #c06835;
 $text-dark: #0A1126;
-$text-light: #F6F3EE;
+/*$text-light: #F6F3EE;*/
+$text-light: white;
 $background-color: black;
 
 // Mobile font sizes
