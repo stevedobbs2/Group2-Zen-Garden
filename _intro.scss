@@ -24,6 +24,10 @@ header {
   }
 }
 
+h2 {
+    margin-bottom: 60px;
+}
+
 .summary p {
 	@include body-normal-light($mobile-body-font-size);
     text-align: left;
@@ -39,6 +43,7 @@ header {
 
 .preamble {
     padding: 0 20px;
+    margin-top: 40px;
 }
 
 .preamble p, .explanation p, .participation p, .benefits p, .requirements p {
@@ -56,6 +61,10 @@ DESKTOP STYLES
 
     header {
         margin-left: 80px;
+    }
+
+    h2 {
+        margin-top: 20px;
     }
 
     .summary {
@@ -83,6 +92,10 @@ DESKTOP STYLES
         @include body-capitalized-light($desktop-body-font-size);
         display: block;
         visibility: visible;
+    }
+
+    .preamble {
+        margin-top: 100px;
     }
 
     // Overlapping style between _intro and _main

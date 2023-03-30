@@ -112,6 +112,10 @@ header {
   position: absolute;
 }
 
+h2 {
+  margin-bottom: 60px;
+}
+
 .summary p {
   font-family: "Exo 2", sans-serif;
   font-size: 14px;
@@ -128,6 +132,7 @@ header {
 
 .preamble {
   padding: 0 20px;
+  margin-top: 40px;
 }
 
 .preamble p, .explanation p, .participation p, .benefits p, .requirements p {
@@ -141,6 +146,9 @@ DESKTOP STYLES
 @media screen and (min-width: 650px) {
   header {
     margin-left: 80px;
+  }
+  h2 {
+    margin-top: 20px;
   }
   .summary {
     margin-left: 80px;
@@ -165,6 +173,9 @@ DESKTOP STYLES
     color: white;
     display: block;
     visibility: visible;
+  }
+  .preamble {
+    margin-top: 100px;
   }
   .preamble, .explanation, .participation, .benefits, .requirements {
     display: grid;
@@ -443,7 +454,6 @@ body {
 
 .page-wrapper {
   margin: 0;
-  /*}*/
 }
 .page-wrapper::before {
   content: "";
